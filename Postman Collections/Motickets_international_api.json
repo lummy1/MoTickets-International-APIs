@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "172940f5-ec24-40ff-a760-f408ec5c9163",
+		"name": "Mosave Tickets International",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fetch event by id (sn)",
+			"id": "4110834c-9872-468a-949b-23f9169a8878",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://moloyal.com/test/mosave/script/api/events/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch weekly events",
+			"id": "d32f8199-b298-4250-b035-a7c5cf9a0540",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://moloyal.com/test/mosave/script/api/weekly/events"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch ticket by currency",
+			"id": "38e043bc-da57-4941-9d45-a446e539f376",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/eventspercurrency/NGN"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Events by tags",
+			"id": "87ddd143-34d7-4e6b-852b-508da0a14aff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://moloyal.com/test/mosave/script/api/eventspercategory/trending"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Event ticket",
+			"id": "1824caaf-435d-46b8-a4e7-ded51db3435a",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventTitle\": \"jdjsjs\",\r\n    \"venue\": \"ksksksk\",\r\n    \"description\": \"<p>djsjsjs</p>\",\r\n    \"ticketCategories\": [\r\n        {\r\n            \"name\": \"Regular\",\r\n            \"price\": \"200\",\r\n            \"discountPrice\": \"5\",\r\n            \"walletDiscount\": \"0\",\r\n            \"qty\": \"10\",\r\n            \"numberOfPeople\": \"1\"\r\n        }\r\n    ],\r\n    \"chargesBearer\": \"client\",\r\n    \"currency\": \"dollar\",\r\n    \"eventType\": \"Comedy\",\r\n    \"start\": [\r\n        {\r\n            \"date\": \"2024-03-15\",\r\n            \"time\": \"19:32:00\"\r\n        }\r\n    ],\r\n    \"end\": [\r\n        {\r\n            \"date\": \"2024-03-22\",\r\n            \"time\": \"17:31:00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/create/eventticket"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Login",
+			"id": "25515a98-2a96-444d-9849-a511f43da0cd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"userid\": \"09096456818\",\r\n\"password\": \"Welcome@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/agent/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Registeration",
+			"id": "20f54ff2-4230-4f54-8b60-2f46c5a3ef59",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"uche\",\r\n    \"lastname\": \"sunday\",\r\n    \"email\": \"olu@gmail.com\",\r\n    \"agentphone\": \"09096456814\",\r\n    \"password\": \"Welcome@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/agent/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Reset Password",
+			"id": "bf4cea9a-ef8f-4186-a4c1-9274d9cc691e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"olu@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/agent/resetpass"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Event Ticket Details",
+			"id": "8b4228c5-bff8-49ff-89b7-76f48be3df2f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"27EJQNDJ22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/agent/geteventticket/27EJQNDJ22"
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Validate Ticket",
+			"id": "aa6b170c-77f2-40fb-a492-0e196a332eda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ticketid\": \"93\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://moloyal.com/test/mosave/script/api/agent/processeventticket"
+			},
+			"response": []
+		},
+		{
+			"name": "Event Host Login",
+			"id": "a311fb34-fb1d-43f8-a9bb-f34fddda626a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"oluodebiyitest2@gmail.com\",\r\n\"password\": \"west\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/eventhost/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Event Host Register",
+			"id": "aadf4e07-06f5-44a6-8873-11454c6a481d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"fullname\": \"olu odebiyim\",\r\n    \"country\": \"USA\",\r\n    \"email\": \"oluodebiyitest2@gmail.com\",\r\n    \"password\": \"west\",\r\n    \"email_sub_flag\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/eventhost/register"
+			},
+			"response": []
+		}
+	]
+}
