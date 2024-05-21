@@ -214,7 +214,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/eventhost/login"
+				"url": "https://moloyal.com/test/mosave/script/api/eventhost/login"
 			},
 			"response": []
 		},
@@ -236,7 +236,7 @@
 						}
 					}
 				},
-				"url": "{{url}}/eventhost/register"
+				"url": "https://moloyal.com/test/mosave/script/api/eventhost/register"
 			},
 			"response": []
 		}
