@@ -203,7 +203,7 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -237,6 +237,19 @@
 					}
 				},
 				"url": "https://moloyal.com/test/mosave/script/api/eventhost/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Host By ID",
+			"id": "640062e0-f55c-4c4c-a47b-1addb7898369",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://moloyal.com/test/mosave/script/api/eventhost/4"
 			},
 			"response": []
 		}
